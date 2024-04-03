@@ -36,6 +36,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
+    # return render_template("index.html")
+    if 'image_path' in request.args:
+            image_path = request.args['image_path']
+            return render_template("index.html", image_path=image_path)
     return render_template("index.html")
 
 
@@ -147,7 +151,8 @@ def predict_img():
                 relative_image_path = os.path.relpath(os.path.join(folder_path, latest_subfolder, f.filename), static_folder)
                 image_path = os.path.join(folder_path, latest_subfolder, f.filename)
                 print("Relative image path:", relative_image_path)  # Print the relative_image_path for debugging
-
+                
+                # return render_template('index.html', image_path=image_path)
                 return render_template('index.html', image_path=relative_image_path)
 
             
@@ -187,8 +192,9 @@ def predict_img():
 
                     if cv2.waitKey(1) == ord("q"):
                         break
-
+                        
                 return video_feed()
+    
 
     folder_path = "runs/detect"
     subfolders = [

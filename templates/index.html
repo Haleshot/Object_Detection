@@ -101,22 +101,17 @@
                   <!-- <img id="my-image" src="{{ url_for('predict_img', filename=image_path) }}" style="height:640; width:640px; display: none;" /> -->
                   <!-- <img id="my-image" src="{{ url_for('display', filename=image_path, _external=True) }}" style="height:640; width:640px;"/> -->
                   <img id="my-image" src="{{ url_for('display', filename=image_path, _external=True) }}" style="max-width: 100%; max-height: 100%; display: none;" />
-                
                   <script>
                     document.getElementById("my-image").onload = function() {
-                        this.style.display = "block";
+                      this.style.display = "block";
                     };
                   </script>
-            
                   <img id="my-video-image" src="{{ url_for('video_feed') }}" style="max-width: 100%; max-height: 100%; display: none;" />
-               
                   <script>
                     document.getElementById("my-video-image").onload = function() {
-                        this.style.display = "block";
+                      this.style.display = "block";
                     };
                   </script>
-
-
                   <!-- AI code ends here-->
                 </div>
               </div>

@@ -158,14 +158,17 @@ def get_frame():
     print("files being read...")
     video = cv2.VideoCapture(mp4_files)  # detected video path
     while True:
-        success, image = video.read()
+        success, frame = video.read()
         if not success:
+            print("file not being read")
             break
-        ret, jpeg = cv2.imencode(".jpg", image)
+        else:
+            ret, buffer = cv2.imencode(".jpg", frame)
+            frame = buffer.tobytes()
 
         yield (
             b"--frame\r\n"
-            b"Content-Type: image/jpeg\r\n\r\n" + jpeg.tobytes() + b"\r\n\r\n"
+            b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n\r\n"
         )
         time.sleep(0.1)  # Control the frame rate to display one frame every 100 milliseconds:
 
@@ -174,6 +177,10 @@ def get_frame():
 # function to display the detected objects video on html page
 @app.route("/video_feed")
 def video_feed():
+    # folder_path = os.getcwd()
+    # mp4_file = "output.mp4"
+    # video_path = os.path.join(folder_path, mp4_file)
+    # return send_file(video_path, mimetype="video")
     return Response(get_frame(), mimetype="multipart/x-mixed-replace; boundary=frame")
 
 

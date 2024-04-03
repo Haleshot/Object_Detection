@@ -43,177 +43,6 @@ def hello_world():
     return render_template("index.html")
 
 
-# @app.route("/", methods=["GET", "POST"])
-# def predict_img():
-#     if request.method == "POST":
-#         if "file" in request.files:
-#             f = request.files["file"]
-#             basepath = os.path.dirname(__file__)
-#             filepath = os.path.join(basepath, "uploads", f.filename)
-#             print("upload folder is ", filepath)
-#             f.save(filepath)
-#             global imgpath
-#             predict_img.imgpath = f.filename
-#             print("printing predict_img :::::: ", predict_img)
-
-#             file_extension = f.filename.rsplit(".", 1)[1].lower()
-
-#             if file_extension == "jpg":
-#                 img = cv2.imread(filepath)
-
-#                 # Perform the detection
-#                 model = YOLO("yolov8n.pt")
-#                 detections = model(img, save=True)
-#                 return display(f.filename)
-
-#             elif file_extension == "mp4":
-#                 video_path = filepath  # replace with your video path
-#                 cap = cv2.VideoCapture(video_path)
-
-#                 # get video dimensions
-#                 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-#                 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-
-#                 # Define the codec and create VideoWriter object
-#                 fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-#                 out = cv2.VideoWriter(
-#                     "output.mp4", fourcc, 30.0, (frame_width, frame_height)
-#                 )
-
-#                 # initialize the YOLOv8 model here
-#                 model = YOLO("yolov8n.pt")
-
-#                 while cap.isOpened():
-#                     ret, frame = cap.read()
-#                     if not ret:
-#                         break
-
-#                     # do YOLOv9 detection on the frame here
-#                     # model = YOLO('yolov9c.pt')
-#                     results = model(frame, save=True)  # working
-#                     print(results)
-#                     cv2.waitKey(1)
-
-#                     res_plotted = results[0].plot()
-#                     cv2.imshow("result", res_plotted)
-
-#                     # write the frame to the output video
-#                     out.write(res_plotted)
-
-#                     if cv2.waitKey(1) == ord("q"):
-#                         break
-
-#                 return video_feed()
-
-#     folder_path = "runs/detect"
-#     subfolders = [
-#         f
-#         for f in os.listdir(folder_path)
-#         if os.path.isdir(os.path.join(folder_path, f))
-#     ]
-#     latest_subfolder = max(
-#         subfolders, key=lambda x: os.path.getctime(os.path.join(folder_path, x))
-#     )
-#     image_path = folder_path + "/" + latest_subfolder + "/" + f.filename
-#     return render_template("index.html", image_path=image_path)
-#     # return "done"
-
-
-
-# @app.route("/", methods=["GET", "POST"])
-# def predict_img():
-#     if request.method == "POST":
-#         if 'file' in request.files:
-#             f = request.files['file']
-#             basepath = os.path.dirname(__file__)
-#             filepath = os.path.join(basepath, 'uploads', f.filename)
-#             print("upload folder is ", filepath)
-#             f.save(filepath)
-#             predict_img.imgpath = f.filename
-#             print("printing predict_img :::::: ", predict_img)
-
-#             file_extension = f.filename.rsplit('.', 1)[1].lower()
-
-#             if file_extension == 'jpg':
-#                 img = cv2.imread(filepath)
-
-#                 # Perform the detection
-#                 model = YOLO('yolov8n.pt')
-#                 detections = model(img, save=True)
-
-#                 # Find the latest subdirectory in the 'runs/detect' folder
-#                 folder_path = os.path.join(basepath, 'runs', 'detect')
-#                 subfolders = [f for f in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, f))]
-#                 latest_subfolder = max(subfolders, key=lambda x: os.path.getctime(os.path.join(folder_path, x)))
-
-#                 # Construct the relative path to the detected image file
-#                 static_folder = os.path.join(basepath, 'static', 'assets')
-#                 relative_image_path = os.path.relpath(os.path.join(folder_path, latest_subfolder, f.filename), static_folder)
-#                 image_path = os.path.join(folder_path, latest_subfolder, f.filename)
-#                 print("Relative image path:", relative_image_path)  # Print the relative_image_path for debugging
-                
-#                 # return render_template('index.html', image_path=image_path)
-#                 return render_template('index.html', image_path=relative_image_path)
-
-            
-#             elif file_extension == "mp4":
-#                 video_path = filepath  # replace with your video path
-#                 cap = cv2.VideoCapture(video_path)
-
-#                 # get video dimensions
-#                 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-#                 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-
-#                 # Define the codec and create VideoWriter object
-#                 fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-#                 out = cv2.VideoWriter(
-#                     "output.mp4", fourcc, 30.0, (frame_width, frame_height)
-#                 )
-
-#                 # initialize the YOLOv8 model here
-#                 model = YOLO("yolov8n.pt")
-
-#                 while cap.isOpened():
-#                     ret, frame = cap.read()
-#                     if not ret:
-#                         break
-
-#                     # do YOLOv9 detection on the frame here
-#                     # model = YOLO('yolov9c.pt')
-#                     results = model(frame, save=True)  # working
-#                     print(results)
-#                     cv2.waitKey(1)
-
-#                     res_plotted = results[0].plot()
-#                     cv2.imshow("result", res_plotted)
-
-#                     # write the frame to the output video
-#                     out.write(res_plotted)
-
-#                     if cv2.waitKey(1) == ord("q"):
-#                         break
-                        
-#                 return video_feed()
-
-#             if image_path:
-#                 return render_template('index.html', image_path=image_path)
-#             else:
-#                 return video_feed()
-
-#     folder_path = "runs/detect"
-#     subfolders = [
-#         f
-#         for f in os.listdir(folder_path)
-#         if os.path.isdir(os.path.join(folder_path, f))
-#     ]
-#     latest_subfolder = max(
-#         subfolders, key=lambda x: os.path.getctime(os.path.join(folder_path, x))
-#     )
-#     image_path = folder_path + "/" + latest_subfolder + "/" + f.filename
-#     return render_template("index.html", image_path=image_path)
-#     # return "done"
-
-
 
 @app.route("/", methods=["GET", "POST"])
 def predict_img():
@@ -273,8 +102,6 @@ def predict_img():
                     if not ret:
                         break
 
-                    # do YOLOv9 detection on the frame here
-                    # model = YOLO('yolov9c.pt')
                     results = model(frame, save=True)  # working
                     print(results)
                     cv2.waitKey(1)
@@ -288,7 +115,6 @@ def predict_img():
                     if cv2.waitKey(1) == ord("q"):
                         break
 
-                    # return render_template('index.html', media_type='video')
                         
                 return video_feed()
             
@@ -306,42 +132,6 @@ def predict_img():
     image_path = folder_path + "/" + latest_subfolder + "/" + f.filename
     return render_template("index.html", image_path=image_path)
     # return "done"
-
-
-
-
-# # #The display function is used to serve the image or video from the folder_path directory.
-# @app.route("/<path:filename>")
-# def display(filename):
-#     folder_path = "runs/detect"
-#     subfolders = [
-#         f
-#         for f in os.listdir(folder_path)
-#         if os.path.isdir(os.path.join(folder_path, f))
-#     ]
-#     latest_subfolder = max(
-#         subfolders, key=lambda x: os.path.getctime(os.path.join(folder_path, x))
-#     )
-#     directory = folder_path + "/" + latest_subfolder
-#     print("printing directory: ", directory)
-#     files = os.listdir(directory)
-#     latest_file = files[0]
-
-#     print(latest_file)
-
-#     filename = os.path.join(folder_path, latest_subfolder, latest_file)
-
-#     file_extension = filename.rsplit(".", 1)[1].lower()
-
-#     environ = request.environ
-#     if file_extension == "jpg":
-#         return send_from_directory(
-#             directory, latest_file, environ
-#         )  # shows the result in seperate tab
-
-#     else:
-#         return "Invalid file format"
-
 
 
 @app.route('/<path:filename>')

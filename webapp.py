@@ -145,6 +145,7 @@ def predict_img():
                 # Construct the relative path to the detected image file
                 static_folder = os.path.join(basepath, 'static', 'assets')
                 relative_image_path = os.path.relpath(os.path.join(folder_path, latest_subfolder, f.filename), static_folder)
+                image_path = os.path.join(folder_path, latest_subfolder, f.filename)
                 print("Relative image path:", relative_image_path)  # Print the relative_image_path for debugging
 
                 return render_template('index.html', image_path=relative_image_path)

@@ -97,7 +97,8 @@
                 <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 700px;">
                   <!-- AI code-->
                   <!-- detected image display -->
-                  <img id="my-image" src="{{ url_for('predict_img', filename=image_path) }}" style="height:640; width:640px; display: none;" />
+                  <!-- <img id="my-image" src="{{ url_for('predict_img', filename=image_path) }}" style="height:640; width:640px; display: none;" /> -->
+                  <img id="my-image" src="{{ url_for('display', filename=image_path, _external=True) }}" style="height:640; width:640px;"/>
                   <script>
                     document.getElementById("my-image").onload = function() {
                       this.style.display = "block";

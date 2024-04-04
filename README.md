@@ -1,4 +1,4 @@
-# Object Detection and Classification in Video
+# Object Detection and Classification Project (YOLOv8 + PyTorch + CV2)
 
 This project aims to provide a beginner-friendly introduction to object detection and classification using computer vision techniques. It presents a web application that can detect and classify objects in video streams or uploaded images.
 
@@ -9,6 +9,7 @@ This project aims to provide a beginner-friendly introduction to object detectio
 - [Installation](#installation)
 - [Usage](#usage)
   - [Web App Interface](#web-app-interface)
+  - [Outputs](#outputs)
   <!-- - [Project Structure](#project-structure) -->
 - [Evaluation](#evaluation)
 - [Deliverables](#deliverables)

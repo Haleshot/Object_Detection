@@ -91,6 +91,16 @@ The following are the results obtained from testing the web application:
 - For video uploads, the processed video with object detection overlays is shown dynamically.
 - Object bounding boxes and labels are drawn around detected objects, providing visual feedback to the user.
 
+#### Image Detection tests
+
+<video src="assets\Image_Output.mp4" controls></video>
+
+#### Video Detection tests
+
+<video src="assets\Video_Output_1.mp4" controls></video>
+
+<video src="assets\Video_Output_2.mp4" controls></video>
+
 <!-- ### Project Structure
 
 ```

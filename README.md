@@ -97,7 +97,8 @@ The following are the results obtained from testing the web application:
 
 #### Video Detection tests
 
-<video src="assets/Video_Output_1.mp4" controls></video>
+<!-- <video src="assets/Video_Output_1.mp4" controls></video> -->
+![Video Output 1](https://github.com/haleshot/Object_Det/raw/main/assets/Video_Output_1.mp4)
 
 <video src="assets/Video_Output_2.mp4" controls></video>
 

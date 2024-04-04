@@ -93,12 +93,14 @@ The following are the results obtained from testing the web application:
 
 #### Image Detection tests
 
-<video src="assets/Image_Output.mp4" controls></video>
+![Image Detection output](assets\Image_Output.gif)
 
 #### Video Detection tests
 
 <!-- <video src="assets/Video_Output_1.mp4" controls></video> -->
 ![Video Output 1](https://github.com/haleshot/Object_Detection/raw/main/assets/Video_Output_1.mp4)
+
+![Video Output 2](https://github.com/haleshot/Object_Detection/raw/main/assets/Video_Output_2.mp4)
 
 <video src="assets/Video_Output_2.mp4" controls></video>
 

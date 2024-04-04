@@ -81,7 +81,7 @@ The web application features a user-friendly interface for uploading videos or i
 
 #### Landing Page Screenshot
 
-![Landing Page](assets\Landing_Page.png)
+![Landing Page](assets/Landing_Page.png)
 
 ### Outputs
 
@@ -93,13 +93,13 @@ The following are the results obtained from testing the web application:
 
 #### Image Detection tests
 
-<video src="assets\Image_Output.mp4" controls></video>
+<video src="assets/Image_Output.mp4" controls></video>
 
 #### Video Detection tests
 
-<video src="assets\Video_Output_1.mp4" controls></video>
+<video src="assets/Video_Output_1.mp4" controls></video>
 
-<video src="assets\Video_Output_2.mp4" controls></video>
+<video src="assets/Video_Output_2.mp4" controls></video>
 
 <!-- ### Project Structure
 

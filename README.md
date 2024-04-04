@@ -93,7 +93,7 @@ The following are the results obtained from testing the web application:
 
 #### Image Detection tests
 
-![Image Detection output](assets\Image_Output.gif)
+![Image Detection output](https://github.com/haleshot/Object_Detection/raw/main/assets/Image_Output.mp4)
 
 #### Video Detection tests
 

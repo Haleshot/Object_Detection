@@ -82,6 +82,16 @@ The web application features a user-friendly interface for uploading videos or i
 
 ![Landing Page](assets\Landing_Page.png)
 
+### Outputs
+
+The following are the results obtained from testing the web application:
+
+- Object detection and classification results are displayed in real-time on the right-side panel of the web application interface.
+- For video uploads, the processed video with object detection overlays is shown dynamically.
+- Object bounding boxes and labels are drawn around detected objects, providing visual feedback to the user.
+
+
+
 <!-- ### Project Structure
 
 ```

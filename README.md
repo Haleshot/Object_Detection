@@ -103,6 +103,7 @@ The following are the results obtained from testing the web application:
 ![Video Output 2](https://github.com/haleshot/Object_Detection/raw/main/assets/Video_Output_2.mp4)
 
 
+
 <!-- ### Project Structure
 
 ```

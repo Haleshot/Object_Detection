@@ -15,6 +15,7 @@ This project aims to provide a beginner-friendly introduction to object detectio
 - [Deliverables](#deliverables)
 - [Optional Extensions](#optional-extensions)
 - [Learning Outcomes](#learning-outcomes)
+- [TO DO](#to-do)
 - [Conclusion](#conclusion)
 
 ## Overview
@@ -146,6 +147,10 @@ By working on this project, you will:
 - Understandood the workflow of building a computer vision application with a Flask-based dashboard.
 - Explored the YOLOv8 pre-trained model and its capabilities.
 - Experimented with different computer vision libraries and functionalities, including Flask and YOLOv8.
+
+
+## To Do
+- [x] Make Video Demos 
 
 ## Conclusion
 

@@ -150,6 +150,8 @@ By working on this project, you will:
 
 
 ## To Do
+- [ ] Create documentation
+    
 - [x] Make Video Demos 
 
 ## Conclusion

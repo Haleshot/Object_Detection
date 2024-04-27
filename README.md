@@ -150,7 +150,7 @@ By working on this project, you will:
 
 
 ## To Do
-- [ ] Create documentation
+- [ ] Create documentation, preferably with [GPT 4 docstrings - sphinx formatting](https://gpt4docstrings.readthedocs.io/en/latest/)
     
 - [x] Make Video Demos 
 

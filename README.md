@@ -141,7 +141,7 @@ After exploring the YOLOv8 documentation, I integrated the YOLOv8 model into a F
 
 ## Learning Outcomes
 
-By working on this project, you will:
+By working on this project, I have:
 
 - Gained practical experience with object detection and classification techniques using YOLOv8.
 - Understandood the workflow of building a computer vision application with a Flask-based dashboard.

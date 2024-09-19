@@ -80,9 +80,9 @@ To run the application, follow these steps:
 
 The web application features a user-friendly interface for uploading videos or images and visualizing the object detection and classification results.
 
-#### Landing Page Screenshot
+<!-- #### Landing Page Screenshot
 
-![Landing Page](assets/Landing_Page.png)
+![Landing Page](assets/Landing_Page.png) -->
 
 ### Outputs
 

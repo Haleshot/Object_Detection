@@ -52,7 +52,7 @@ To set up the project, follow these steps:
 
 4. Activate the virtual environment:
    - On Windows: `.\env\Scripts\activate`
-   - On Unix or Linux: `source env/bin/activate`
+   - On Unix or Linux or macOS: `source env/bin/activate`
 
 5. Install the required packages:
 

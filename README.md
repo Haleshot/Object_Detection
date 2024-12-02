@@ -150,8 +150,6 @@ By working on this project, I have:
 
 
 ## To Do
-- [ ] Create documentation, preferably with [GPT 4 docstrings - sphinx formatting](https://gpt4docstrings.readthedocs.io/en/latest/)
-    
 - [x] Make Video Demos 
 
 ## Conclusion

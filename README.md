@@ -1,3 +1,5 @@
+
+
 # Object Detection and Classification Project (YOLOv8 + PyTorch + CV2)
 
 This project aims to provide a beginner-friendly introduction to object detection and classification using computer vision techniques. It presents a web application that can detect and classify objects in video streams or uploaded images.
@@ -144,7 +146,7 @@ After exploring the YOLOv8 documentation, I integrated the YOLOv8 model into a F
 By working on this project, I have:
 
 - Gained practical experience with object detection and classification techniques using YOLOv8.
-- Understandood the workflow of building a computer vision application with a Flask-based dashboard.
+- Understood the workflow of building a computer vision application with a Flask-based dashboard.
 - Explored the YOLOv8 pre-trained model and its capabilities.
 - Experimented with different computer vision libraries and functionalities, including Flask and YOLOv8.
 
